@@ -8,3 +8,13 @@ D:\visual studio projects\Garage\obj\Debug\Garage.csproj.GenerateResource.cache
 D:\visual studio projects\Garage\obj\Debug\Garage.csproj.CoreCompileInputs.cache
 D:\visual studio projects\Garage\obj\Debug\Garage.exe
 D:\visual studio projects\Garage\obj\Debug\Garage.pdb
+D:\react-project\Garage\bin\Debug\Garage.exe.config
+D:\react-project\Garage\bin\Debug\Garage.exe
+D:\react-project\Garage\bin\Debug\Garage.pdb
+D:\react-project\Garage\obj\Debug\Garage.csprojAssemblyReference.cache
+D:\react-project\Garage\obj\Debug\Garage.Form1.resources
+D:\react-project\Garage\obj\Debug\Garage.Properties.Resources.resources
+D:\react-project\Garage\obj\Debug\Garage.csproj.GenerateResource.cache
+D:\react-project\Garage\obj\Debug\Garage.csproj.CoreCompileInputs.cache
+D:\react-project\Garage\obj\Debug\Garage.exe
+D:\react-project\Garage\obj\Debug\Garage.pdb
