@@ -16,6 +16,7 @@ public class Row{
     {
 
     }
+
     public List<Col> GetColumes() { return Columes; }
 
 ///<summary>

@@ -15,7 +15,15 @@ namespace Garage
         public Form1()
         {
             InitializeComponent();
+            Assets.Refresh();
         }
 
+        private void Login_Click(object sender, EventArgs e)
+        {
+            using (var window =new MainWindow())
+            {
+                window.ShowDialog();
+            }
+        }
     }
 }

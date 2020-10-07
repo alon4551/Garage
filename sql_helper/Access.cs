@@ -83,8 +83,9 @@ public class Access
             return Rows;
 
         }
-        catch
+        catch(Exception err)
         {
+            Error = err.Message;
             ConnectionState(false);
             return null;
         }

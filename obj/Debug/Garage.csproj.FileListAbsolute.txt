@@ -18,3 +18,7 @@ D:\react-project\Garage\obj\Debug\Garage.csproj.GenerateResource.cache
 D:\react-project\Garage\obj\Debug\Garage.csproj.CoreCompileInputs.cache
 D:\react-project\Garage\obj\Debug\Garage.exe
 D:\react-project\Garage\obj\Debug\Garage.pdb
+D:\react-project\Garage\obj\Debug\Garage.MainWindow.resources
+D:\react-project\Garage\obj\Debug\Garage.UserWizzard.resources
+D:\react-project\Garage\bin\Debug\AdvancedWizard.dll
+D:\react-project\Garage\obj\Debug\Garage.csproj.CopyComplete

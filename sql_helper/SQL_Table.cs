@@ -9,10 +9,10 @@ namespace Garage.sql_helper
     public class SQL_Table
     {
         public List<Row> Rows;
-        public string table_Name;
+        public string Name;
         public SQL_Table (string name, List<Row> rows){
             Rows = rows;
-            table_Name = name;  
+            Name = name;  
         }
         public SQL_Table() { 
         }
