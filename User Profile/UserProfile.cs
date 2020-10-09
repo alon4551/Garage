@@ -275,7 +275,7 @@ namespace Garage
                 return false;
             return true;
         }
-        public static bool input_check(TextBox input,Label warning)
+        public static bool input_check(TextBox input)
         {
             switch (input.Name)
             {
@@ -283,14 +283,12 @@ namespace Garage
                     {
                         if (ID_Check(input.Text))
                         {
-                            warning.Text = "";
                             input.BackColor = Color.White;
                             return true;
                         }
                         else
                         {
                             input.BackColor = Color.Red;
-                            warning.Text = "תעודת זהות לא תקינה";
                             return false;
 
                         }
@@ -299,14 +297,12 @@ namespace Garage
                     {
                         if(IsValidEmail(input.Text))
                         {
-                            warning.Text = "";
                             input.BackColor = Color.White;
                             return true;
                         }
                         else
                         {
                             input.BackColor = Color.Red;
-                            warning.Text = "אימייל לא תקין";
                             return false;
                         }    
                     }
@@ -314,14 +310,12 @@ namespace Garage
                     {
                         if (isValidPhone(input.Text))
                         {
-                            warning.Text = "";
                             input.BackColor = Color.White;
                             return true;
                         }
                         else
                         {
                             input.BackColor = Color.Red;
-                            warning.Text = "פלאפון לא תקין";
                             return false;
                         }
                     }
@@ -329,15 +323,11 @@ namespace Garage
                     {
                         if (input.Text.Length == 7)
                         {
-                            warning.Text = "";
-                            warning.BackColor = Color.White;
                             return true;
                         }
                         else
                         {
 
-                            warning.Text = "מספר רכב שגוי, אנא רק 7 תווים";
-                            warning.BackColor = Color.Red;
                             return false;
                         }
                     }
@@ -345,7 +335,7 @@ namespace Garage
                     return false;
             }
         }
-        public static bool comboboxValidator(ComboBox box ,Label warning)
+        public static bool comboboxValidator(ComboBox box )
         {
             bool result= box.SelectedIndex != -1;
             if (result)

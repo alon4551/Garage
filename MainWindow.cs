@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Garage.Worker;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,32 +18,86 @@ namespace Garage
         {
             InitializeComponent();
         }
-
+        //loading data to screens
         private void Load_People()
         {
-            Profile_List.Items.Clear();
-            foreach (string name in people_Main.getPeopleNames())
-                Profile_List.Items.Add(name);
+            Load_List(Profile_List, people_Main.getPeopleNames());
+        }
+        private void Load_Register_Manufactors()
+        {
+            Load_List(Register_manufactor, Assets.getManufactorNames());
+        }
+        private void Load_car()
+        {
+            Load_List(Register_car_list, Register_utiles.getCarNumbers());
+        }
+        private void Load_Register()
+        {
+            Load_Register_Manufactors();
+            Load_car();
+        }
+        private void Load_Register_Models()
+        {
+            Load_List(Register_model, Register_utiles.getModelsNames());
+        }
+        private void Load_List(ComboBox box, List<string> names)
+        {
+            box.Items.Clear();
+            foreach (string name in names)
+                box.Items.Add(name);
+        }
+        private void Load_List(ListBox box, List<string> names)
+        {
+            box.Items.Clear();
+            foreach (string name in names)
+                box.Items.Add(name);
+        }
+        private void Load_Workers()
+        {
+            Load_List(Worker_List, Worker_utiles.getWorkerNames());
         }
         private void MainWindow_Load(object sender, EventArgs e)
         {
             Load_People();
+            Load_Workers();
+            Load_Register();
         }
+        //finish loading data to screen
 
+        //Customers
         private void Profile_List_SelectedIndexChanged(object sender, EventArgs e)
         {
-            people_Main.id = people_Main.People[Profile_List.SelectedIndex].GetColValue("id").ToString();
+            ListBox box = (ListBox)sender;
+            switch (box.Name)
+            {
+                case "Profile_List":
+                    {
+                        people_Main.id = people_Main.People[box.SelectedIndex].GetColValue("id").ToString();
+
+                        break;
+                    }
+                case "Worker_List":
+                    {
+                        people_Main.id = Worker_utiles.workers[box.SelectedIndex].GetColValue("id").ToString();
+                        break;
+                    }
+                default:
+                    {
+                        people_Main.id = "";
+                        break;
+                    }
+            }
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(Profile_List.SelectedIndex!=-1)
+            if(people_Main.id!="")
             {
                 using(var window =new UserWizzard())
                 {
                     UserProfile.setUserId(int.Parse(people_Main.id));
                     window.ShowDialog();
-
                 }
             }
         }
@@ -55,5 +110,159 @@ namespace Garage
                 MessageBox.Show("משתמש נחמק");
             }
         }
+        //customers
+        //register code
+        private void Register_Cancel(object sender, EventArgs e)
+        {
+            //clear layout
+        }
+        private void Clear_Car_Register_Form()
+        {
+            Register_car_number.Text = "";
+            Register_model.SelectedIndex = -1;
+            Register_manufactor.SelectedIndex = -1;
+            Register_kilometer.Text = "";
+        }
+        private void Register_Finish(object sender, EventArgs e)
+        {
+            List<object> values = new List<object>();
+            if (Wizzard_Helper.inputValidator(Register_Profile_Page))
+            {
+                try
+                {
+                    values.Add(int.Parse(Register_id.Text));
+                    values.Add(Register_firstname.Text);
+                    values.Add(Register_lastname.Text);
+                    values.Add(Register_birthady.Value.ToShortDateString());
+                    values.Add(Register_gender.Text);
+                    values.Add(Register_phone.Text);
+                    values.Add(Register_email.Text);
+                    if (Register_utiles.InsertPerson(values) && Register_utiles.InsertCar())
+                    {
+                        Assets.Refresh();
+                        Clear_Car_Register_Form();
+                        MessageBox.Show("Inserted");
+                    }
+                    else
+                    {
+                        MessageBox.Show("not Inserted");
+
+                    }
+                    }
+                catch
+                {
+
+                }
+            }
+            else
+                MessageBox.Show("not ok");
+            //register account
+        }
+        private List<object> GetCarData()
+        {
+            List<object> car = new List<object>();
+            try
+            {
+                car.Add(int.Parse(Register_car_number.Text));
+                car.Add(Register_id.Text);
+                car.Add(Register_utiles.getModelId(Register_model.SelectedIndex));
+                car.Add(Register_kilometer.Text);
+                return car;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+        
+        private void Register_add_car_Click(object sender, EventArgs e)
+        {
+            if(Register_id.Text=="")
+            {
+                MessageBox.Show("אנא הכנס תעודת זהות בחלון הקודם");
+                return;
+            }
+            if(Wizzard_Helper.inputValidator(Register_car_deatiles))
+            {
+                if (Register_utiles.ExsistCar(int.Parse(Register_car_number.Text)) == false)
+                {
+                    Register_utiles.AddCar(GetCarData());
+                    Register_car_list.SelectedIndex = -1;
+                    Load_car();
+                    Clear_Car_Register_Form();
+                }
+                else
+                    MessageBox.Show("מספר מכונית קיים במערכת");
+
+            }   
+        }
+
+        private void Register_manufactor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Register_manufactor.SelectedIndex == -1)
+                return;
+            try
+            {
+                Register_utiles.SetManufactor(Register_manufactor.SelectedIndex);
+                Register_model.Enabled = true;
+                Load_Register_Models();
+            }
+            catch
+            {
+                Register_model.SelectedIndex = -1;
+                Register_model.Enabled = false;
+                Register_model.Items.Clear();
+                
+            }
+        }
+
+        private void Register_car_list_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Register_car_list.SelectedIndex == -1)
+                return;
+           List<object>car= Register_utiles.GetCar(Register_car_list.SelectedIndex);
+            try
+            {
+                Register_car_number.Text = car[0].ToString();
+                Register_manufactor.SelectedIndex = Register_utiles.getManufactorIndex((int)car[2]);
+                Register_model.SelectedIndex = Register_utiles.getModelIndex((int)car[2]);
+                Register_kilometer.Text = car[3].ToString();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
+        }
+
+        private void Register_update_car_Click(object sender, EventArgs e)
+        {
+            if (Wizzard_Helper.inputValidator(Register_car_deatiles)&& Register_car_list.SelectedIndex != -1)
+            {
+                Register_utiles.updateCar(GetCarData(), Register_car_list.SelectedIndex);
+                Register_car_list.SelectedIndex = -1;
+                Load_car();
+            }
+        }
+
+        private void Register_delete_car_Click(object sender, EventArgs e)
+        {
+            if (Register_car_list.SelectedIndex != -1)
+            {
+                Register_utiles.RemoveCar(Register_car_list.SelectedIndex);
+                Register_car_list.SelectedIndex = -1;
+                Load_car();
+            }
+        }
+
+      
+        private void Customers_Page_Paint(object sender, PaintEventArgs e)
+        {
+            people_Main.id = "";
+
+        }
+
+        
+
+        //register code
     }
 }

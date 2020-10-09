@@ -58,7 +58,8 @@
     <Compile Include="MainWindow.Designer.cs">
       <DependentUpon>MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="People.main.cs" />
+    <Compile Include="Register\People.main.cs" />
+    <Compile Include="Register\Register.cs" />
     <Compile Include="Shift_Control.cs" />
     <Compile Include="sql_helper\Access.cs" />
     <Compile Include="Form1.cs">
@@ -81,6 +82,8 @@
     <Compile Include="User Profile\UserWizzard.Designer.cs">
       <DependentUpon>UserWizzard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Wizzard_Helper.cs" />
+    <Compile Include="Worker\Worker_utiles.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

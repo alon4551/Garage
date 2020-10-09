@@ -69,6 +69,13 @@ namespace Garage
             orders = Access.getObjects(SQL_Queries.Select("orders"));
 
         }
+        public static List<string> getManufactorNames()
+        {
+            List<string> names = new List<string>();
+            foreach (Row row in manufactors)
+                names.Add(row.GetColValue("manufactor").ToString());
+            return names;
+        }
         public static Row getCar(string id)
         {
             foreach(Row row in cars)
@@ -76,6 +83,37 @@ namespace Garage
                 if (row.GetColValue("car_number").ToString() == id) return row;
             }
             return null;
+        }
+        public static List<Row> GetCustomers()
+        {
+            bool exsist;
+            List<Row> customers = new List<Row>();
+            foreach (Row person in users)
+            {
+                exsist = false;
+                foreach (Row worker in workers)
+                {
+                    if (person.GetColValue("id").ToString() == worker.GetColValue("id").ToString())
+                    {
+                        exsist = true;
+                        break;
+                    }
+                }
+                if (exsist == false)
+                    customers.Add(person);
+            }
+            return customers;
+        }
+        public static List<Row> filter_Models(int manufactors_index)
+        {
+            Row manufactor = manufactors[manufactors_index];
+            List<Row> filter = new List<Row>();
+            foreach (Row model in models)
+            {
+                if (model.GetColValue("manufactor").ToString() == manufactor.GetColValue("id").ToString())
+                    filter.Add(model);
+            }
+            return filter;
         }
         public static List<Row> getWorkers()
         {

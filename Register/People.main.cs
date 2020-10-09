@@ -8,7 +8,7 @@ namespace Garage
 {
     public class People_main
     {
-        public List<Row> People =Assets.users;
+        public List<Row> People =Assets.GetCustomers();
         public string id;
         public People_main()
         {
@@ -22,7 +22,9 @@ namespace Garage
         {
             try
             {
-               return Access.Execute(SQL_Queries.Delete("people", new Condition("id", int.Parse(id))));
+               bool execute= Access.Execute(SQL_Queries.Delete("people", new Condition("id", int.Parse(id))));
+                Assets.Refresh();
+                return execute;
             }
             catch
             {
@@ -32,7 +34,7 @@ namespace Garage
         public List<string> getPeopleNames()
         {
             List<string> list = new List<string>();
-            foreach (Row row in People)
+            foreach (Row row in Assets.GetCustomers())
                 list.Add($"{row.GetColValue("lname")} {row.GetColValue("fname")}");
             return list;
         }

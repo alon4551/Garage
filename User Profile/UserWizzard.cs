@@ -151,16 +151,16 @@ namespace Garage
         }
         private bool UserInputValidator()
         {
-            bool result = UserProfile.input_check(id, id_warning);
-            result &= UserProfile.input_check(email, warning_email);
-            result&=UserProfile.input_check(phone, warning_phone);
+            bool result = UserProfile.input_check(id);
+            result &= UserProfile.input_check(email);
+            result&=UserProfile.input_check(phone);
             return result;
         }
         private bool CarInputValidator()
         {
-            bool result = UserProfile.input_check(car_number, warning_Car);
-            result &= UserProfile.comboboxValidator(manufacturs, warning_manufactor);
-            result&=UserProfile.comboboxValidator(models,warning_model);
+            bool result = UserProfile.input_check(car_number);
+            result &= UserProfile.comboboxValidator(manufacturs);
+            result &= UserProfile.comboboxValidator(models);
             return result;
         }
         private void UpdateUser_Click(object sender, EventArgs e)
