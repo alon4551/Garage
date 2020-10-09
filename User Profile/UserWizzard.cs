@@ -271,7 +271,7 @@ namespace Garage
         private void button1_Click(object sender, EventArgs e)
         {   List<object> values = new List<object>();
             List<CheckBox> boxes = new List<CheckBox>();
-            foreach(CheckBox box in groupBox2.Controls.OfType<CheckBox>())
+            foreach(CheckBox box in filter_table.Controls.OfType<CheckBox>())
             {
                 if (box.Checked)
                 {

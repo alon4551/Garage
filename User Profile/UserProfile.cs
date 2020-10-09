@@ -341,12 +341,11 @@ namespace Garage
             if (result)
             {
                 box.BackColor = Color.White;
-                warning.Text = "";
+                
             }
             else
             {
                 box.BackColor = Color.Red;
-                warning.Text = "אנא בחר פריט מהאפשרויות";
             }
             return result;
         }

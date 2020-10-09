@@ -22,3 +22,5 @@ D:\react-project\Garage\obj\Debug\Garage.MainWindow.resources
 D:\react-project\Garage\obj\Debug\Garage.UserWizzard.resources
 D:\react-project\Garage\bin\Debug\AdvancedWizard.dll
 D:\react-project\Garage\obj\Debug\Garage.csproj.CopyComplete
+D:\visual studio projects\Garage\obj\Debug\Garage.MainWindow.resources
+D:\visual studio projects\Garage\obj\Debug\Garage.UserWizzard.resources
