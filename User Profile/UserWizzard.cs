@@ -103,6 +103,9 @@ namespace Garage
         }
         private void load_Profile()
         {
+            personID.Text = UserProfile.user.GetColValue("id").ToString();
+            personName.Text = UserProfile.user.GetColValue("fname").ToString();
+            personLast.Text = UserProfile.user.GetColValue("lname").ToString();
             id.Text = UserProfile.user.GetColValue("id").ToString();
             firstname.Text = UserProfile.user.GetColValue("fname").ToString();
             lastname.Text = UserProfile.user.GetColValue("lname").ToString();
@@ -311,5 +314,6 @@ namespace Garage
         {
             quantity.Text = UserProfile.quantityTreatment(int.Parse(UserProfile.getTreatments()[treatments.SelectedIndex].GetColValue("id").ToString())).ToString();
         }
+
     }
 }
