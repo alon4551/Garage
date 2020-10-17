@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Diagnostics.Eventing.Reader;
 
 namespace Garage
 {
     public static class UserProfile
     {
         public static List<SQL_Table> Profile,Order;
-        public static Row user;
-        public static List<Row> cars, workers, myOrders, filter_Orders = new List<Row>(),filter_Models=new List<Row>(),models,manufactors;
+        public static Row user,worker=null;
+        public static List<Row> cars, workers, myOrders, filter_Orders = new List<Row>(),filter_Models=new List<Row>(),models,manufactors,shifts=null,workerOrders=null;
         public static int user_id;
         public static string manufactor;
 
@@ -103,7 +104,7 @@ namespace Garage
         }
         public static void GetUserInfo()
         {
-            Profile = Assets.getPersonInfo(user_id.ToString());
+            Profile = Assets.getWorkerInfo(user_id.ToString());
             workers = Assets.getWorkers();
 
             foreach(SQL_Table table in Profile)
@@ -123,6 +124,16 @@ namespace Garage
                     case "cars":
                         {
                             cars = table.Rows;
+                            break;
+                        }
+                    case "worker":
+                        {
+                            worker = table.Rows[0];
+                            break;
+                        }
+                    case "workerShifts":
+                        {
+                            shifts = table.Rows;
                             break;
                         }
                 }
@@ -402,6 +413,52 @@ namespace Garage
             if (execute)
                 Refresh();
             return execute;
+        }
+        public static bool UpdatePassword(string password,string old)
+        {
+            if (old == worker.GetColValue("password").ToString())
+            {
+                worker.UpdateColume(new Col("password", password));
+                return true;
+            }
+            return false;
+        }
+        public static bool updateWorker()
+        {
+            Row columes =new Row( );
+            Condition con = new Condition("id", int.Parse(worker.GetColValue("id").ToString()));
+            columes.AddColume(new Col("password", worker.GetColValue("password")));
+            return Access.Execute(SQL_Queries.Update("workers", columes.GetColumes(), con));
+        }
+        public static List<Row> Filter_Shifts(int mouth,int week) {
+            List<Row> filterShifts = new List<Row>();
+            Row shift ;
+            DateTime time,start,end;
+            foreach(Row row in shifts)
+            {
+                try
+                {
+                    time = DateTime.Parse(row.GetColValue("day").ToString());
+                    start = DateTime.Parse(row.GetColValue("start_shift").ToString());
+                    end = DateTime.Parse(row.GetColValue("end_shift").ToString());
+                    if (time.Month == mouth)
+                    {
+                        if (week == -1 || (week + 1) * 7 > time.Day && week * 7 < time.Day)
+                        {
+
+                            shift = new Row();
+                            shift.AddColume(new Col("day", $"{time.Day}/{time.Month}"));
+                            shift.AddColume(new Col("hours", end.Hour - start.Hour));
+                            filterShifts.Add(shift);
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+            return filterShifts;
         }
     }
 }

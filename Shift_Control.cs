@@ -9,6 +9,7 @@ namespace Garage
 {
     public static class Shift_Control
     {
+
         private static int getLastShift()
         {
             int number=-1;
@@ -45,6 +46,58 @@ namespace Garage
                     Access.Execute(query);
                 }
             }
+        }
+        public static List<Row> Filter_Shifts(DateTime value,int id)
+        {
+            List<Row> filterShifts = new List<Row>();
+            Row shift;
+            DateTime time, start, end;
+            foreach (Row row in Assets.shifts)
+            {
+                try
+                {
+                    if (id!=-1&&row.GetColValue("id_worker").ToString() != id.ToString())
+                        continue;
+                    time = DateTime.Parse(row.GetColValue("day").ToString());
+                    start = DateTime.Parse(row.GetColValue("start_shift").ToString());
+                    end = DateTime.Parse(row.GetColValue("end_shift").ToString());
+                    if (time.Month == value.Month&&time.Year==value.Year)
+                    {
+                            shift = new Row();
+                            shift.AddColume(new Col("id", row.GetColValue("id_worker")));
+                            shift.AddColume(new Col("day", $"{time.Day}/{time.Month}"));
+                            shift.AddColume(new Col("hours", end.Hour - start.Hour));
+                            filterShifts.Add(shift);
+                    }
+                }
+                catch (Exception err)
+                {
+
+                }
+            }
+            return Organize(filterShifts);
+        }
+        public static List<Row> Organize(List<Row> shifts)
+        {
+            List<Row> orginized = new List<Row>();
+            Row temp=null;
+            for (; shifts.Count!=0 ;)
+            {
+                temp = shifts[0];
+                DateTime temp_day=DateTime.Parse(temp.GetColValue("day").ToString()),day ;
+                for (int j = 1; j < shifts.Count; j++)
+                {
+                    day = DateTime.Parse(shifts[j].GetColValue("day").ToString());
+                    if (day < temp_day)
+                    {
+                        temp = shifts[j];
+                        temp_day = day;
+                    }
+                }
+                orginized.Add(temp);
+                shifts.Remove(temp);
+            }
+            return orginized;
         }
     }
 }

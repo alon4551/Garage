@@ -225,20 +225,30 @@ namespace Garage
         public static List<SQL_Table> getWorkerInfo(string id)
         {
             List<SQL_Table> info = getPersonInfo(id);
-            List<Row> shifts = new List<Row>(), orders = new List<Row>();
-            foreach (Row row in users)
+            List<Row> Workershifts = new List<Row>(), Workerorders = new List<Row>();
+            foreach(Row row in workers)
+            {
                 if (id == row.GetColValue("id").ToString())
                 {
-                    info.Add(setTable("users", new List<Row>() { row }));
+                    info.Add(setTable("worker", new List<Row>() { row }));
                     break;
                 }
+            }
+            foreach(Row row in shifts)
+            {
+                if (row.GetColValue("id_worker").ToString() == id)
+                {
+                    Workershifts.Add(row);
+                }
+            }
+            info.Add(setTable("workerShifts", Workershifts));
             foreach (Row row in orders)
                 if (id == row.GetColValue("worker").ToString())
                 {
-                    orders.Add(row);
+                    Workerorders.Add(row);
                     break;
                 }
-            info.Add(setTable("workerOrders", orders));
+            info.Add(setTable("workerOrders", Workerorders));
             return info;
         }
     }

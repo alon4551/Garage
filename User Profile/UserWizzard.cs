@@ -66,12 +66,40 @@ namespace Garage
                     }
             }
         }
+        
         private void UserWizzard_Load(object sender, EventArgs e)
         {
             UserProfile.manufactors = Assets.manufactors;
             UserProfile.models = Assets.models;
             UserProfile.filter_Orders = UserProfile.myOrders;
             Refresh();
+            WorkerPages();
+            
+        }
+        private void WorkerPages()
+        {
+            if (UserProfile.worker == null)
+            {
+                PasswordWindow.Enabled = false;
+                ShiftsWindow.Enabled = false;
+            }
+            else
+            {
+                mouths.SelectedIndex = DateTime.Now.Month - 1;
+                mouthBox.Checked = true;
+                Load_Shifts();
+            }
+        }
+        private void Load_Shifts()
+        {
+            List<Row> shifts=UserProfile.Filter_Shifts(mouths.SelectedIndex + 1, weeks.SelectedIndex);
+            ShiftChart.Series["Series1"].Points.Clear();
+            foreach (Row shift in shifts)
+            {
+                string day = shift.GetColValue("day").ToString();
+                int hours = int.Parse(shift.GetColValue("hours").ToString());
+                ShiftChart.Series["Series1"].Points.AddXY(day,hours);
+            }
         }
         private void load_Manufactors()
         {
@@ -310,5 +338,63 @@ namespace Garage
         {
             quantity.Text = UserProfile.quantityTreatment(int.Parse(UserProfile.getTreatments()[treatments.SelectedIndex].GetColValue("id").ToString())).ToString();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Load_Shifts();
+        }
+
+        private void mouthBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            switch (box.Name)
+            {
+                case "mouthBox":
+                    {
+                        mouths.Enabled = box.Enabled;
+
+                        break;
+                    }
+                case "weekBox":
+                    {
+                        weeks.Enabled = box.Enabled;
+                        break;
+                    }
+            }
+        }
+        private void ClearPasswords()
+        {
+            passwordBox.Text = "";
+            oldPassword.Text = "";
+            rePassword.Text = "";
+        }
+        private void updatePassword_Click(object sender, EventArgs e)
+        {
+            if (passwordBox.Text == rePassword.Text)
+            {
+                if (UserProfile.UpdatePassword(passwordBox.Text, oldPassword.Text))
+                {
+                    if (UserProfile.updateWorker())
+                    {
+                        MessageBox.Show("סיסמא עודכה");
+                    }
+                    else
+                    {
+                        MessageBox.Show(Access.ExplaindError());
+                    }
+                }
+                else
+                {
+                        MessageBox.Show("סיסמא ישנה לא תואמת");
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("על הסיסמאות להיות תאומות");
+            }
+                ClearPasswords();
+            }
+        
     }
 }

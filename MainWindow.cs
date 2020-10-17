@@ -1,7 +1,9 @@
-﻿using Garage.Worker;
+﻿using Garage.sql_helper;
+using Garage.Worker;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -52,9 +54,17 @@ namespace Garage
             foreach (string name in names)
                 box.Items.Add(name);
         }
+        private void Load_List(CheckedListBox box, List<string> names)
+        {
+            box.Items.Clear();
+            foreach (string name in names)
+                box.Items.Add(name);
+        }
         private void Load_Workers()
         {
             Load_List(Worker_List, Worker_utiles.getWorkerNames());
+            Load_List(Worker_checkbox, Worker_utiles.getWorkerNames());
+
         }
         private void MainWindow_Load(object sender, EventArgs e)
         {
@@ -107,6 +117,7 @@ namespace Garage
             if (people_Main.remove_user())
             {
                 Assets.Refresh();
+                MainWindow_Load(null, null);
                 MessageBox.Show("משתמש נחמק");
             }
         }
@@ -141,6 +152,7 @@ namespace Garage
                     {
                         Assets.Refresh();
                         Clear_Car_Register_Form();
+                        MainWindow_Load(null, null);
                         MessageBox.Show("Inserted");
                     }
                     else
@@ -253,15 +265,94 @@ namespace Garage
                 Load_car();
             }
         }
-
+        private void CheckBoxEnable(object sender,EventArgs e)
+        {
+            CheckBox box = (CheckBox)sender;
+            switch (box.Name)
+            {
+                case "Worker_Date_Select":
+                    {
+                        mouthPicker.Enabled = box.Enabled;
+                        Search_Click(null, null);
+                        break;
+                    }
+                 }
+        }
       
         private void Customers_Page_Paint(object sender, PaintEventArgs e)
         {
             people_Main.id = "";
 
         }
+        private void Load_Shifts(List<SQL_Table> workers)
+        {
+            Shifts.Series.Clear();
+            foreach(SQL_Table worker in workers)
+            {
+                Shifts.Series.Add(worker.Name);
+                Shifts.Series[worker.Name].XValueMember = "Month_name";
+                Shifts.Series[worker.Name].YValueMembers = "Hours";
+                foreach (Row shift in worker.Rows)
+                    Shifts.Series[worker.Name].Points.AddXY(shift.GetColValue("day"), shift.GetColValue("hours"));
+                   
+            }
 
-        
+        }
+        private void Search_Click(object sender, EventArgs e)
+        {
+            Load_Shifts(Worker_utiles.getShifts(mouthPicker,Worker_checkbox));
+        }
+
+        private void Worker_checkbox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            Search_Click(null, null);
+        }
+
+        private void Worker_Register_Finish(object sender, EventArgs e)
+        {
+            if (Wizzard_Helper.inputValidator(Worker_Profile_Panel) &&
+                Wizzard_Helper.inputValidator(Worker_User_panel))
+            {
+                try
+                {
+                    List<object> profile = new List<object>()
+                {
+                    int.Parse(Worker_Id.Text),
+                    Worker_fname.Text,
+                    Worker_lname.Text,
+                    Worker_Bdate.Value.ToShortDateString(),
+                    Worker_gender.Text,
+                    Worker_phone.Text,
+                    Worker_email.Text,
+                },user=new List<object>()
+                {
+                    int.Parse(Worker_Id.Text),
+                    Worker_password.Text,
+                    Worker_Admin.Checked
+                };
+                    if( Access.Execute(SQL_Queries.Insert("people", profile))&& Access.Execute(SQL_Queries.Insert("workers", user)))
+                    {
+                        Assets.Refresh();
+                        MainWindow_Load(null, null);
+                        MessageBox.Show("inserted");
+                    }
+                    else
+                    {
+                        MessageBox.Show(Access.ExplaindError());
+                        Access.Execute(SQL_Queries.Delete("people", new Condition("id", int.Parse(Worker_Id.Text))));
+                    }
+                    
+                }
+                catch
+                {
+
+                }
+            }
+            else
+                MessageBox.Show("אנא מלא את השדות החסרים");
+        }
+
+
 
         //register code
     }
