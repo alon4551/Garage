@@ -24,3 +24,15 @@ D:\react-project\Garage\bin\Debug\AdvancedWizard.dll
 D:\react-project\Garage\obj\Debug\Garage.csproj.CopyComplete
 D:\visual studio projects\Garage\obj\Debug\Garage.MainWindow.resources
 D:\visual studio projects\Garage\obj\Debug\Garage.UserWizzard.resources
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Core.dll
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Platform.dll
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Xaml.dll
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Core.pdb
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Core.xml
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Platform.pdb
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Xaml.pdb
+D:\react-project\Garage\bin\Debug\Xamarin.Forms.Xaml.xml
+D:\react-project\Garage\obj\Debug\Garage.Treatment.Loading_Screen.resources
+D:\react-project\Garage\bin\Debug\CircularProgressBar.dll
+D:\react-project\Garage\bin\Debug\WinFormAnimation.dll
+D:\react-project\Garage\bin\Debug\CircularProgressBar.xml

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Customers_Page = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -79,6 +79,30 @@
             this.Register_car_list = new System.Windows.Forms.ListBox();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.Worker_Profile_Page = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.Worker_Profile_Panel = new System.Windows.Forms.TableLayoutPanel();
+            this.Worker_Id = new System.Windows.Forms.TextBox();
+            this.Worker_fname = new System.Windows.Forms.TextBox();
+            this.Worker_lname = new System.Windows.Forms.TextBox();
+            this.Worker_phone = new System.Windows.Forms.TextBox();
+            this.Worker_email = new System.Windows.Forms.TextBox();
+            this.Worker_gender = new System.Windows.Forms.ComboBox();
+            this.Worker_Bdate = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.advancedWizardPage2 = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.Worker_User_panel = new System.Windows.Forms.TableLayoutPanel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.Worker_password = new System.Windows.Forms.TextBox();
+            this.Worker_Admin = new System.Windows.Forms.CheckBox();
+            this.advancedWizardPage3 = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
             this.Workers_Page = new System.Windows.Forms.TabPage();
             this.tabControl6 = new System.Windows.Forms.TabControl();
             this.tabPage12 = new System.Windows.Forms.TabPage();
@@ -87,7 +111,7 @@
             this.Worker_Delete = new System.Windows.Forms.Button();
             this.Worker_List = new System.Windows.Forms.ListBox();
             this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.Profile = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
+            this.Worker_Register = new AdvancedWizardControl.Wizard.AdvancedWizard();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.Worker_checkbox = new System.Windows.Forms.CheckedListBox();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -121,10 +145,20 @@
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.Treatment_Update = new System.Windows.Forms.Button();
+            this.Treatment_Delete = new System.Windows.Forms.Button();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.Treatment_Preview_Decription = new System.Windows.Forms.RichTextBox();
+            this.Treatment_Preview_Name = new System.Windows.Forms.TextBox();
+            this.Treatment_Preview_Price = new System.Windows.Forms.TextBox();
+            this.Treatment_List = new System.Windows.Forms.ListBox();
             this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.advancedWizard3 = new AdvancedWizardControl.Wizard.AdvancedWizard();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage13 = new System.Windows.Forms.TabPage();
@@ -134,7 +168,7 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.Manufactor_List = new System.Windows.Forms.ListBox();
             this.tabPage18 = new System.Windows.Forms.TabPage();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -144,7 +178,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.listBox6 = new System.Windows.Forms.ListBox();
+            this.Model_List = new System.Windows.Forms.ListBox();
             this.label25 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
@@ -160,31 +194,14 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.Worker_Register = new AdvancedWizardControl.Wizard.AdvancedWizard();
-            this.Worker_Profile_Page = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
-            this.advancedWizardPage2 = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
-            this.advancedWizardPage3 = new AdvancedWizardControl.WizardPages.AdvancedWizardPage();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.Worker_Profile_Panel = new System.Windows.Forms.TableLayoutPanel();
-            this.Worker_Id = new System.Windows.Forms.TextBox();
-            this.Worker_fname = new System.Windows.Forms.TextBox();
-            this.Worker_lname = new System.Windows.Forms.TextBox();
-            this.Worker_phone = new System.Windows.Forms.TextBox();
-            this.Worker_email = new System.Windows.Forms.TextBox();
-            this.Worker_gender = new System.Windows.Forms.ComboBox();
-            this.Worker_Bdate = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
-            this.Worker_User_panel = new System.Windows.Forms.TableLayoutPanel();
-            this.label40 = new System.Windows.Forms.Label();
-            this.Worker_password = new System.Windows.Forms.TextBox();
-            this.Worker_Admin = new System.Windows.Forms.CheckBox();
+            this.advancedWizard1 = new AdvancedWizardControl.Wizard.AdvancedWizard();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.Treatment_Decription = new System.Windows.Forms.RichTextBox();
+            this.Treatment_Name = new System.Windows.Forms.TextBox();
+            this.Treatment_Price = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.Customers_Page.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -199,11 +216,18 @@
             this.Register_Car_Deatile.SuspendLayout();
             this.Register_car_deatiles.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
+            this.Worker_Profile_Page.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.Worker_Profile_Panel.SuspendLayout();
+            this.advancedWizardPage2.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
+            this.Worker_User_panel.SuspendLayout();
             this.Workers_Page.SuspendLayout();
             this.tabControl6.SuspendLayout();
             this.tabPage12.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tabPage15.SuspendLayout();
+            this.Worker_Register.SuspendLayout();
             this.tabPage16.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Shifts)).BeginInit();
@@ -219,21 +243,19 @@
             this.tabPage6.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage9.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
             this.tabPage10.SuspendLayout();
-            this.advancedWizard3.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabControl5.SuspendLayout();
             this.tabPage13.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPage18.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.Worker_Register.SuspendLayout();
-            this.Worker_Profile_Page.SuspendLayout();
-            this.advancedWizardPage2.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.Worker_Profile_Panel.SuspendLayout();
-            this.tableLayoutPanel14.SuspendLayout();
-            this.Worker_User_panel.SuspendLayout();
+            this.advancedWizard1.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -363,13 +385,13 @@
             // 
             // Register
             // 
-            this.Register.BackButtonEnabled = true;
+            this.Register.BackButtonEnabled = false;
             this.Register.BackButtonText = "חזרה";
             this.Register.ButtonLayout = AdvancedWizardControl.Enums.ButtonLayoutKind.Default;
             this.Register.ButtonsVisible = true;
             this.Register.CancelButtonText = "ביטול";
-            this.Register.Controls.Add(this.Register_Cars);
             this.Register.Controls.Add(this.Register_Profile);
+            this.Register.Controls.Add(this.Register_Cars);
             this.Register.CurrentPageIsFinishPage = false;
             this.Register.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Register.FinishButton = true;
@@ -381,7 +403,7 @@
             this.Register.Location = new System.Drawing.Point(3, 2);
             this.Register.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Register.Name = "Register";
-            this.Register.NextButtonEnabled = false;
+            this.Register.NextButtonEnabled = true;
             this.Register.NextButtonText = "הבא";
             this.Register.ProcessKeys = false;
             this.Register.Size = new System.Drawing.Size(848, 608);
@@ -846,6 +868,318 @@
             this.label38.Text = "פרטי מכונית";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Worker_Profile_Page
+            // 
+            this.Worker_Profile_Page.Controls.Add(this.tableLayoutPanel8);
+            this.Worker_Profile_Page.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_Profile_Page.Header = true;
+            this.Worker_Profile_Page.HeaderBackgroundColor = System.Drawing.Color.White;
+            this.Worker_Profile_Page.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.Worker_Profile_Page.HeaderImage = ((System.Drawing.Image)(resources.GetObject("Worker_Profile_Page.HeaderImage")));
+            this.Worker_Profile_Page.HeaderImageVisible = false;
+            this.Worker_Profile_Page.HeaderTitle = "אנא הכנס פרטים לפרופיל העובד";
+            this.Worker_Profile_Page.Location = new System.Drawing.Point(0, 0);
+            this.Worker_Profile_Page.Name = "Worker_Profile_Page";
+            this.Worker_Profile_Page.PreviousPage = 0;
+            this.Worker_Profile_Page.Size = new System.Drawing.Size(848, 568);
+            this.Worker_Profile_Page.SubTitle = "";
+            this.Worker_Profile_Page.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
+            this.Worker_Profile_Page.TabIndex = 2;
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.65566F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.43868F));
+            this.tableLayoutPanel8.Controls.Add(this.Worker_Profile_Panel, 1, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 3;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.04418F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.52209F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(848, 568);
+            this.tableLayoutPanel8.TabIndex = 1;
+            // 
+            // Worker_Profile_Panel
+            // 
+            this.Worker_Profile_Panel.ColumnCount = 2;
+            this.Worker_Profile_Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.4375F));
+            this.Worker_Profile_Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.5625F));
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_Id, 1, 2);
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_fname, 1, 3);
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_lname, 1, 4);
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_phone, 1, 7);
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_email, 1, 8);
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_gender, 1, 6);
+            this.Worker_Profile_Panel.Controls.Add(this.Worker_Bdate, 1, 5);
+            this.Worker_Profile_Panel.Controls.Add(this.label7, 0, 2);
+            this.Worker_Profile_Panel.Controls.Add(this.label8, 0, 3);
+            this.Worker_Profile_Panel.Controls.Add(this.label9, 0, 4);
+            this.Worker_Profile_Panel.Controls.Add(this.label10, 0, 5);
+            this.Worker_Profile_Panel.Controls.Add(this.label11, 0, 6);
+            this.Worker_Profile_Panel.Controls.Add(this.label12, 0, 7);
+            this.Worker_Profile_Panel.Controls.Add(this.label13, 0, 8);
+            this.Worker_Profile_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_Profile_Panel.Location = new System.Drawing.Point(101, 65);
+            this.Worker_Profile_Panel.Name = "Worker_Profile_Panel";
+            this.Worker_Profile_Panel.RowCount = 10;
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_Profile_Panel.Size = new System.Drawing.Size(660, 451);
+            this.Worker_Profile_Panel.TabIndex = 0;
+            // 
+            // Worker_Id
+            // 
+            this.Worker_Id.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_Id.Location = new System.Drawing.Point(3, 23);
+            this.Worker_Id.Name = "Worker_Id";
+            this.Worker_Id.Size = new System.Drawing.Size(335, 22);
+            this.Worker_Id.TabIndex = 0;
+            // 
+            // Worker_fname
+            // 
+            this.Worker_fname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_fname.Location = new System.Drawing.Point(3, 51);
+            this.Worker_fname.Name = "Worker_fname";
+            this.Worker_fname.Size = new System.Drawing.Size(335, 22);
+            this.Worker_fname.TabIndex = 1;
+            // 
+            // Worker_lname
+            // 
+            this.Worker_lname.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_lname.Location = new System.Drawing.Point(3, 79);
+            this.Worker_lname.Name = "Worker_lname";
+            this.Worker_lname.Size = new System.Drawing.Size(335, 22);
+            this.Worker_lname.TabIndex = 2;
+            // 
+            // Worker_phone
+            // 
+            this.Worker_phone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_phone.Location = new System.Drawing.Point(3, 165);
+            this.Worker_phone.Name = "Worker_phone";
+            this.Worker_phone.Size = new System.Drawing.Size(335, 22);
+            this.Worker_phone.TabIndex = 5;
+            // 
+            // Worker_email
+            // 
+            this.Worker_email.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_email.Location = new System.Drawing.Point(3, 193);
+            this.Worker_email.Name = "Worker_email";
+            this.Worker_email.Size = new System.Drawing.Size(335, 22);
+            this.Worker_email.TabIndex = 6;
+            // 
+            // Worker_gender
+            // 
+            this.Worker_gender.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_gender.FormattingEnabled = true;
+            this.Worker_gender.Items.AddRange(new object[] {
+            "זכר",
+            "נקבה",
+            "מעדיף לא לומר"});
+            this.Worker_gender.Location = new System.Drawing.Point(3, 135);
+            this.Worker_gender.Name = "Worker_gender";
+            this.Worker_gender.Size = new System.Drawing.Size(335, 24);
+            this.Worker_gender.TabIndex = 4;
+            // 
+            // Worker_Bdate
+            // 
+            this.Worker_Bdate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_Bdate.Location = new System.Drawing.Point(3, 107);
+            this.Worker_Bdate.Name = "Worker_Bdate";
+            this.Worker_Bdate.Size = new System.Drawing.Size(335, 22);
+            this.Worker_Bdate.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Location = new System.Drawing.Point(344, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(313, 28);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "תעודת זהות";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Location = new System.Drawing.Point(344, 48);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(313, 28);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "שם פרטי";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Location = new System.Drawing.Point(344, 76);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(313, 28);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "שם משפחה";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Location = new System.Drawing.Point(344, 104);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(313, 28);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "יום הולדת";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Location = new System.Drawing.Point(344, 132);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(313, 30);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "מין";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label12.Location = new System.Drawing.Point(344, 162);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(313, 28);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "פאלפון";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label13.Location = new System.Drawing.Point(344, 190);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(313, 28);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "אימייל";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // advancedWizardPage2
+            // 
+            this.advancedWizardPage2.Controls.Add(this.tableLayoutPanel14);
+            this.advancedWizardPage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedWizardPage2.Header = true;
+            this.advancedWizardPage2.HeaderBackgroundColor = System.Drawing.Color.White;
+            this.advancedWizardPage2.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.advancedWizardPage2.HeaderImage = ((System.Drawing.Image)(resources.GetObject("advancedWizardPage2.HeaderImage")));
+            this.advancedWizardPage2.HeaderImageVisible = true;
+            this.advancedWizardPage2.HeaderTitle = "אנא מלא פרטי עובד";
+            this.advancedWizardPage2.Location = new System.Drawing.Point(0, 0);
+            this.advancedWizardPage2.Name = "advancedWizardPage2";
+            this.advancedWizardPage2.PreviousPage = 0;
+            this.advancedWizardPage2.Size = new System.Drawing.Size(848, 568);
+            this.advancedWizardPage2.SubTitle = "";
+            this.advancedWizardPage2.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
+            this.advancedWizardPage2.TabIndex = 2;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 3;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel14.Controls.Add(this.Worker_User_panel, 1, 1);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 3;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.29317F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.90361F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.80321F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(848, 568);
+            this.tableLayoutPanel14.TabIndex = 1;
+            // 
+            // Worker_User_panel
+            // 
+            this.Worker_User_panel.ColumnCount = 2;
+            this.Worker_User_panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Worker_User_panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.Worker_User_panel.Controls.Add(this.label40, 0, 1);
+            this.Worker_User_panel.Controls.Add(this.Worker_password, 1, 1);
+            this.Worker_User_panel.Controls.Add(this.Worker_Admin, 0, 2);
+            this.Worker_User_panel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_User_panel.Location = new System.Drawing.Point(75, 135);
+            this.Worker_User_panel.Name = "Worker_User_panel";
+            this.Worker_User_panel.RowCount = 3;
+            this.Worker_User_panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_User_panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_User_panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.Worker_User_panel.Size = new System.Drawing.Size(700, 141);
+            this.Worker_User_panel.TabIndex = 0;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label40.Location = new System.Drawing.Point(353, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(344, 28);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "סיסמא";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Worker_password
+            // 
+            this.Worker_password.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_password.Location = new System.Drawing.Point(3, 3);
+            this.Worker_password.Name = "Worker_password";
+            this.Worker_password.PasswordChar = '*';
+            this.Worker_password.Size = new System.Drawing.Size(344, 22);
+            this.Worker_password.TabIndex = 0;
+            // 
+            // Worker_Admin
+            // 
+            this.Worker_Admin.AutoSize = true;
+            this.Worker_Admin.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Worker_Admin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_Admin.Location = new System.Drawing.Point(353, 31);
+            this.Worker_Admin.Name = "Worker_Admin";
+            this.Worker_Admin.Size = new System.Drawing.Size(344, 107);
+            this.Worker_Admin.TabIndex = 1;
+            this.Worker_Admin.Text = "מנהל";
+            this.Worker_Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Worker_Admin.UseVisualStyleBackColor = true;
+            // 
+            // advancedWizardPage3
+            // 
+            this.advancedWizardPage3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedWizardPage3.Header = true;
+            this.advancedWizardPage3.HeaderBackgroundColor = System.Drawing.Color.White;
+            this.advancedWizardPage3.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.advancedWizardPage3.HeaderImage = ((System.Drawing.Image)(resources.GetObject("advancedWizardPage3.HeaderImage")));
+            this.advancedWizardPage3.HeaderImageVisible = true;
+            this.advancedWizardPage3.HeaderTitle = "Welcome to Advanced Wizard";
+            this.advancedWizardPage3.Location = new System.Drawing.Point(0, 0);
+            this.advancedWizardPage3.Name = "advancedWizardPage3";
+            this.advancedWizardPage3.PreviousPage = 0;
+            this.advancedWizardPage3.Size = new System.Drawing.Size(848, 568);
+            this.advancedWizardPage3.SubTitle = "Your page description goes here";
+            this.advancedWizardPage3.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
+            this.advancedWizardPage3.TabIndex = 2;
+            // 
             // Workers_Page
             // 
             this.Workers_Page.Controls.Add(this.tabControl6);
@@ -956,23 +1290,36 @@
             this.tabPage15.Text = "הוספת עובד";
             this.tabPage15.UseVisualStyleBackColor = true;
             // 
-            // Profile
+            // Worker_Register
             // 
-            this.Profile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Profile.Header = true;
-            this.Profile.HeaderBackgroundColor = System.Drawing.Color.White;
-            this.Profile.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.Profile.HeaderImage = ((System.Drawing.Image)(resources.GetObject("Profile.HeaderImage")));
-            this.Profile.HeaderImageVisible = true;
-            this.Profile.HeaderTitle = "טיפול חדש";
-            this.Profile.Location = new System.Drawing.Point(0, 0);
-            this.Profile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Profile.Name = "Profile";
-            this.Profile.PreviousPage = 0;
-            this.Profile.Size = new System.Drawing.Size(848, 568);
-            this.Profile.SubTitle = "Your page description goes here";
-            this.Profile.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
-            this.Profile.TabIndex = 1;
+            this.Worker_Register.BackButtonEnabled = false;
+            this.Worker_Register.BackButtonText = "חזרה";
+            this.Worker_Register.ButtonLayout = AdvancedWizardControl.Enums.ButtonLayoutKind.Default;
+            this.Worker_Register.ButtonsVisible = true;
+            this.Worker_Register.CancelButtonText = "ביטול";
+            this.Worker_Register.Controls.Add(this.Worker_Profile_Page);
+            this.Worker_Register.Controls.Add(this.advancedWizardPage2);
+            this.Worker_Register.Controls.Add(this.advancedWizardPage3);
+            this.Worker_Register.CurrentPageIsFinishPage = false;
+            this.Worker_Register.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Worker_Register.FinishButton = true;
+            this.Worker_Register.FinishButtonEnabled = true;
+            this.Worker_Register.FinishButtonText = "סיום";
+            this.Worker_Register.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.Worker_Register.HelpButton = false;
+            this.Worker_Register.HelpButtonText = "עזרה";
+            this.Worker_Register.Location = new System.Drawing.Point(3, 2);
+            this.Worker_Register.Name = "Worker_Register";
+            this.Worker_Register.NextButtonEnabled = true;
+            this.Worker_Register.NextButtonText = "הבא";
+            this.Worker_Register.ProcessKeys = false;
+            this.Worker_Register.Size = new System.Drawing.Size(848, 608);
+            this.Worker_Register.TabIndex = 0;
+            this.Worker_Register.TouchScreen = false;
+            this.Worker_Register.WizardPages.Add(this.Worker_Profile_Page);
+            this.Worker_Register.WizardPages.Add(this.advancedWizardPage2);
+            this.Worker_Register.WizardPages.Add(this.advancedWizardPage3);
+            this.Worker_Register.Finish += new System.EventHandler(this.Worker_Register_Finish);
             // 
             // tabPage16
             // 
@@ -1047,14 +1394,14 @@
             // 
             // Shifts
             // 
-            chartArea3.AxisX.Title = "תאריכים";
-            chartArea3.AxisY.Maximum = 30D;
-            chartArea3.AxisY.Title = "שעות";
-            chartArea3.Name = "ChartArea1";
-            this.Shifts.ChartAreas.Add(chartArea3);
+            chartArea1.AxisX.Title = "תאריכים";
+            chartArea1.AxisY.Maximum = 30D;
+            chartArea1.AxisY.Title = "שעות";
+            chartArea1.Name = "ChartArea1";
+            this.Shifts.ChartAreas.Add(chartArea1);
             this.Shifts.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.Shifts.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.Shifts.Legends.Add(legend1);
             this.Shifts.Location = new System.Drawing.Point(3, 2);
             this.Shifts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Shifts.Name = "Shifts";
@@ -1289,7 +1636,7 @@
             // 
             // advancedWizard2
             // 
-            this.advancedWizard2.BackButtonEnabled = true;
+            this.advancedWizard2.BackButtonEnabled = false;
             this.advancedWizard2.BackButtonText = "< Back";
             this.advancedWizard2.ButtonLayout = AdvancedWizardControl.Enums.ButtonLayoutKind.Default;
             this.advancedWizard2.ButtonsVisible = true;
@@ -1305,13 +1652,12 @@
             this.advancedWizard2.Location = new System.Drawing.Point(3, 2);
             this.advancedWizard2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.advancedWizard2.Name = "advancedWizard2";
-            this.advancedWizard2.NextButtonEnabled = false;
+            this.advancedWizard2.NextButtonEnabled = true;
             this.advancedWizard2.NextButtonText = "Next >";
             this.advancedWizard2.ProcessKeys = false;
             this.advancedWizard2.Size = new System.Drawing.Size(848, 608);
             this.advancedWizard2.TabIndex = 0;
             this.advancedWizard2.TouchScreen = false;
-            this.advancedWizard2.WizardPages.Add(this.Profile);
             this.advancedWizard2.WizardPages.Add(this.Register_Profile);
             this.advancedWizard2.WizardPages.Add(this.Register_Cars);
             this.advancedWizard2.WizardPages.Add(this.Worker_Profile_Page);
@@ -1335,18 +1681,18 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(3, 87);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(716, 426);
             this.chart1.TabIndex = 3;
             this.chart1.Text = "chart1";
@@ -1413,8 +1759,8 @@
             // 
             // tabPage9
             // 
-            this.tabPage9.Controls.Add(this.button5);
-            this.tabPage9.Controls.Add(this.listBox2);
+            this.tabPage9.Controls.Add(this.tableLayoutPanel15);
+            this.tabPage9.Controls.Add(this.Treatment_List);
             this.tabPage9.Location = new System.Drawing.Point(4, 25);
             this.tabPage9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage9.Name = "tabPage9";
@@ -1424,30 +1770,166 @@
             this.tabPage9.Text = "טיפולים";
             this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // tableLayoutPanel15
             // 
-            this.button5.Location = new System.Drawing.Point(165, 176);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(336, 89);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "צפייה בטיפול";
-            this.button5.UseVisualStyleBackColor = true;
+            this.tableLayoutPanel15.ColumnCount = 3;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.494504F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.01099F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.494505F));
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel16, 1, 1);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(3, 2);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 3;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.072369F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.00658F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.780347F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(669, 608);
+            this.tableLayoutPanel15.TabIndex = 1;
             // 
-            // listBox2
+            // tableLayoutPanel16
             // 
-            this.listBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(684, 2);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(167, 608);
-            this.listBox2.TabIndex = 0;
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 1);
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel18, 0, 0);
+            this.tableLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(41, 46);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 2;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.44068F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.55932F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(589, 523);
+            this.tableLayoutPanel16.TabIndex = 0;
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.ColumnCount = 2;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel17.Controls.Add(this.Treatment_Update, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.Treatment_Delete, 0, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 455);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 1;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(583, 65);
+            this.tableLayoutPanel17.TabIndex = 0;
+            // 
+            // Treatment_Update
+            // 
+            this.Treatment_Update.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Update.Location = new System.Drawing.Point(3, 3);
+            this.Treatment_Update.Name = "Treatment_Update";
+            this.Treatment_Update.Size = new System.Drawing.Size(286, 59);
+            this.Treatment_Update.TabIndex = 0;
+            this.Treatment_Update.Text = "לעדכן";
+            this.Treatment_Update.UseVisualStyleBackColor = true;
+            this.Treatment_Update.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Treatment_Delete
+            // 
+            this.Treatment_Delete.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Delete.Location = new System.Drawing.Point(295, 3);
+            this.Treatment_Delete.Name = "Treatment_Delete";
+            this.Treatment_Delete.Size = new System.Drawing.Size(285, 59);
+            this.Treatment_Delete.TabIndex = 2;
+            this.Treatment_Delete.Text = "למחוק";
+            this.Treatment_Delete.UseVisualStyleBackColor = true;
+            this.Treatment_Delete.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.41166F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.58833F));
+            this.tableLayoutPanel18.Controls.Add(this.label43, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.label44, 0, 1);
+            this.tableLayoutPanel18.Controls.Add(this.label45, 0, 2);
+            this.tableLayoutPanel18.Controls.Add(this.Treatment_Preview_Decription, 1, 1);
+            this.tableLayoutPanel18.Controls.Add(this.Treatment_Preview_Name, 1, 0);
+            this.tableLayoutPanel18.Controls.Add(this.Treatment_Preview_Price, 1, 2);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 3;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.47903F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.84753F));
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.71749F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(583, 446);
+            this.tableLayoutPanel18.TabIndex = 1;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(520, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(60, 17);
+            this.label43.TabIndex = 0;
+            this.label43.Text = "שם טיפול";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(506, 51);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(74, 17);
+            this.label44.TabIndex = 1;
+            this.label44.Text = "תיאור טיפול";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(510, 308);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(70, 17);
+            this.label45.TabIndex = 2;
+            this.label45.Text = "סכום טיפול";
+            // 
+            // Treatment_Preview_Decription
+            // 
+            this.Treatment_Preview_Decription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Preview_Decription.Location = new System.Drawing.Point(3, 54);
+            this.Treatment_Preview_Decription.Name = "Treatment_Preview_Decription";
+            this.Treatment_Preview_Decription.Size = new System.Drawing.Size(459, 251);
+            this.Treatment_Preview_Decription.TabIndex = 3;
+            this.Treatment_Preview_Decription.Text = "";
+            // 
+            // Treatment_Preview_Name
+            // 
+            this.Treatment_Preview_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Preview_Name.Location = new System.Drawing.Point(3, 3);
+            this.Treatment_Preview_Name.Name = "Treatment_Preview_Name";
+            this.Treatment_Preview_Name.Size = new System.Drawing.Size(459, 22);
+            this.Treatment_Preview_Name.TabIndex = 4;
+            // 
+            // Treatment_Preview_Price
+            // 
+            this.Treatment_Preview_Price.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Preview_Price.Location = new System.Drawing.Point(3, 311);
+            this.Treatment_Preview_Price.Name = "Treatment_Preview_Price";
+            this.Treatment_Preview_Price.Size = new System.Drawing.Size(459, 22);
+            this.Treatment_Preview_Price.TabIndex = 5;
+            this.Treatment_Preview_Price.TextChanged += new System.EventHandler(this.Treatment_Price_TextChanged);
+            // 
+            // Treatment_List
+            // 
+            this.Treatment_List.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Treatment_List.FormattingEnabled = true;
+            this.Treatment_List.ItemHeight = 16;
+            this.Treatment_List.Location = new System.Drawing.Point(672, 2);
+            this.Treatment_List.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Treatment_List.Name = "Treatment_List";
+            this.Treatment_List.Size = new System.Drawing.Size(179, 608);
+            this.Treatment_List.TabIndex = 0;
+            this.Treatment_List.SelectedIndexChanged += new System.EventHandler(this.Treatment_List_SelectedIndexChanged);
             // 
             // tabPage10
             // 
-            this.tabPage10.Controls.Add(this.advancedWizard3);
+            this.tabPage10.Controls.Add(this.advancedWizard1);
             this.tabPage10.Location = new System.Drawing.Point(4, 25);
             this.tabPage10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage10.Name = "tabPage10";
@@ -1456,38 +1938,6 @@
             this.tabPage10.TabIndex = 1;
             this.tabPage10.Text = "טיפול חדש";
             this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // advancedWizard3
-            // 
-            this.advancedWizard3.BackButtonEnabled = true;
-            this.advancedWizard3.BackButtonText = "חזרה";
-            this.advancedWizard3.ButtonLayout = AdvancedWizardControl.Enums.ButtonLayoutKind.Default;
-            this.advancedWizard3.ButtonsVisible = true;
-            this.advancedWizard3.CancelButtonText = "ביטול";
-            this.advancedWizard3.Controls.Add(this.Profile);
-            this.advancedWizard3.CurrentPageIsFinishPage = false;
-            this.advancedWizard3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedWizard3.FinishButton = true;
-            this.advancedWizard3.FinishButtonEnabled = true;
-            this.advancedWizard3.FinishButtonText = "סיום";
-            this.advancedWizard3.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.advancedWizard3.HelpButton = true;
-            this.advancedWizard3.HelpButtonText = "עזרה";
-            this.advancedWizard3.Location = new System.Drawing.Point(3, 2);
-            this.advancedWizard3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.advancedWizard3.Name = "advancedWizard3";
-            this.advancedWizard3.NextButtonEnabled = false;
-            this.advancedWizard3.NextButtonText = "הבא";
-            this.advancedWizard3.ProcessKeys = false;
-            this.advancedWizard3.Size = new System.Drawing.Size(848, 608);
-            this.advancedWizard3.TabIndex = 0;
-            this.advancedWizard3.TouchScreen = false;
-            this.advancedWizard3.WizardPages.Add(this.Profile);
-            this.advancedWizard3.WizardPages.Add(this.Register_Profile);
-            this.advancedWizard3.WizardPages.Add(this.Register_Cars);
-            this.advancedWizard3.WizardPages.Add(this.Worker_Profile_Page);
-            this.advancedWizard3.WizardPages.Add(this.advancedWizardPage2);
-            this.advancedWizard3.WizardPages.Add(this.advancedWizardPage3);
             // 
             // tabPage7
             // 
@@ -1519,7 +1969,7 @@
             this.tabPage13.Controls.Add(this.label1);
             this.tabPage13.Controls.Add(this.textBox1);
             this.tabPage13.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage13.Controls.Add(this.listBox5);
+            this.tabPage13.Controls.Add(this.Manufactor_List);
             this.tabPage13.Location = new System.Drawing.Point(4, 25);
             this.tabPage13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage13.Name = "tabPage13";
@@ -1598,16 +2048,16 @@
             this.button8.Text = "למחוק";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // listBox5
+            // Manufactor_List
             // 
-            this.listBox5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 16;
-            this.listBox5.Location = new System.Drawing.Point(704, 2);
-            this.listBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(147, 608);
-            this.listBox5.TabIndex = 0;
+            this.Manufactor_List.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Manufactor_List.FormattingEnabled = true;
+            this.Manufactor_List.ItemHeight = 16;
+            this.Manufactor_List.Location = new System.Drawing.Point(704, 2);
+            this.Manufactor_List.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Manufactor_List.Name = "Manufactor_List";
+            this.Manufactor_List.Size = new System.Drawing.Size(147, 608);
+            this.Manufactor_List.TabIndex = 0;
             // 
             // tabPage18
             // 
@@ -1616,7 +2066,7 @@
             this.tabPage18.Controls.Add(this.textBox3);
             this.tabPage18.Controls.Add(this.label2);
             this.tabPage18.Controls.Add(this.tableLayoutPanel2);
-            this.tabPage18.Controls.Add(this.listBox6);
+            this.tabPage18.Controls.Add(this.Model_List);
             this.tabPage18.Location = new System.Drawing.Point(4, 25);
             this.tabPage18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage18.Name = "tabPage18";
@@ -1714,16 +2164,16 @@
             this.button13.Text = "למחוק";
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // listBox6
+            // Model_List
             // 
-            this.listBox6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 16;
-            this.listBox6.Location = new System.Drawing.Point(704, 2);
-            this.listBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.Size = new System.Drawing.Size(147, 608);
-            this.listBox6.TabIndex = 0;
+            this.Model_List.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Model_List.FormattingEnabled = true;
+            this.Model_List.ItemHeight = 16;
+            this.Model_List.Location = new System.Drawing.Point(704, 2);
+            this.Model_List.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Model_List.Name = "Model_List";
+            this.Model_List.Size = new System.Drawing.Size(147, 608);
+            this.Model_List.TabIndex = 0;
             // 
             // label25
             // 
@@ -1888,348 +2338,114 @@
             this.label14.Size = new System.Drawing.Size(134, 37);
             this.label14.TabIndex = 0;
             // 
-            // Worker_Register
+            // advancedWizard1
             // 
-            this.Worker_Register.BackButtonEnabled = true;
-            this.Worker_Register.BackButtonText = "חזרה";
-            this.Worker_Register.ButtonLayout = AdvancedWizardControl.Enums.ButtonLayoutKind.Default;
-            this.Worker_Register.ButtonsVisible = true;
-            this.Worker_Register.CancelButtonText = "ביטול";
-            this.Worker_Register.Controls.Add(this.advancedWizardPage2);
-            this.Worker_Register.Controls.Add(this.Worker_Profile_Page);
-            this.Worker_Register.Controls.Add(this.advancedWizardPage3);
-            this.Worker_Register.CurrentPageIsFinishPage = false;
-            this.Worker_Register.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_Register.FinishButton = true;
-            this.Worker_Register.FinishButtonEnabled = true;
-            this.Worker_Register.FinishButtonText = "סיום";
-            this.Worker_Register.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
-            this.Worker_Register.HelpButton = false;
-            this.Worker_Register.HelpButtonText = "עזרה";
-            this.Worker_Register.Location = new System.Drawing.Point(3, 2);
-            this.Worker_Register.Name = "Worker_Register";
-            this.Worker_Register.NextButtonEnabled = true;
-            this.Worker_Register.NextButtonText = "הבא";
-            this.Worker_Register.ProcessKeys = false;
-            this.Worker_Register.Size = new System.Drawing.Size(848, 608);
-            this.Worker_Register.TabIndex = 0;
-            this.Worker_Register.TouchScreen = false;
-            this.Worker_Register.WizardPages.Add(this.Worker_Profile_Page);
-            this.Worker_Register.WizardPages.Add(this.advancedWizardPage2);
-            this.Worker_Register.WizardPages.Add(this.advancedWizardPage3);
-            this.Worker_Register.Finish += new System.EventHandler(this.Worker_Register_Finish);
+            this.advancedWizard1.BackButtonEnabled = true;
+            this.advancedWizard1.BackButtonText = "< Back";
+            this.advancedWizard1.ButtonLayout = AdvancedWizardControl.Enums.ButtonLayoutKind.Default;
+            this.advancedWizard1.ButtonsVisible = true;
+            this.advancedWizard1.CancelButtonText = "&Cancel";
+            this.advancedWizard1.Controls.Add(this.tableLayoutPanel13);
+            this.advancedWizard1.CurrentPageIsFinishPage = false;
+            this.advancedWizard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.advancedWizard1.FinishButton = true;
+            this.advancedWizard1.FinishButtonEnabled = true;
+            this.advancedWizard1.FinishButtonText = "&Finish";
+            this.advancedWizard1.FlatStyle = System.Windows.Forms.FlatStyle.Standard;
+            this.advancedWizard1.HelpButton = true;
+            this.advancedWizard1.HelpButtonText = "&Help";
+            this.advancedWizard1.Location = new System.Drawing.Point(3, 2);
+            this.advancedWizard1.Name = "advancedWizard1";
+            this.advancedWizard1.NextButtonEnabled = false;
+            this.advancedWizard1.NextButtonText = "Next >";
+            this.advancedWizard1.ProcessKeys = false;
+            this.advancedWizard1.Size = new System.Drawing.Size(848, 608);
+            this.advancedWizard1.TabIndex = 0;
+            this.advancedWizard1.TouchScreen = false;
             // 
-            // Worker_Profile_Page
+            // tableLayoutPanel13
             // 
-            this.Worker_Profile_Page.Controls.Add(this.tableLayoutPanel8);
-            this.Worker_Profile_Page.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_Profile_Page.Header = true;
-            this.Worker_Profile_Page.HeaderBackgroundColor = System.Drawing.Color.White;
-            this.Worker_Profile_Page.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.Worker_Profile_Page.HeaderImage = ((System.Drawing.Image)(resources.GetObject("Worker_Profile_Page.HeaderImage")));
-            this.Worker_Profile_Page.HeaderImageVisible = false;
-            this.Worker_Profile_Page.HeaderTitle = "אנא הכנס פרטים לפרופיל העובד";
-            this.Worker_Profile_Page.Location = new System.Drawing.Point(0, 0);
-            this.Worker_Profile_Page.Name = "Worker_Profile_Page";
-            this.Worker_Profile_Page.PreviousPage = 0;
-            this.Worker_Profile_Page.Size = new System.Drawing.Size(848, 568);
-            this.Worker_Profile_Page.SubTitle = "";
-            this.Worker_Profile_Page.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
-            this.Worker_Profile_Page.TabIndex = 2;
+            this.tableLayoutPanel13.ColumnCount = 5;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.550333F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.76325F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.13609F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.550333F));
+            this.tableLayoutPanel13.Controls.Add(this.label39, 2, 1);
+            this.tableLayoutPanel13.Controls.Add(this.label41, 2, 2);
+            this.tableLayoutPanel13.Controls.Add(this.label42, 2, 3);
+            this.tableLayoutPanel13.Controls.Add(this.Treatment_Decription, 3, 2);
+            this.tableLayoutPanel13.Controls.Add(this.Treatment_Name, 3, 1);
+            this.tableLayoutPanel13.Controls.Add(this.Treatment_Price, 3, 3);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 5;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.46988F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.04016F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.21285F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.07668F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.979612F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(848, 568);
+            this.tableLayoutPanel13.TabIndex = 3;
             // 
-            // advancedWizardPage2
+            // label39
             // 
-            this.advancedWizardPage2.Controls.Add(this.tableLayoutPanel14);
-            this.advancedWizardPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedWizardPage2.Header = true;
-            this.advancedWizardPage2.HeaderBackgroundColor = System.Drawing.Color.White;
-            this.advancedWizardPage2.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.advancedWizardPage2.HeaderImage = ((System.Drawing.Image)(resources.GetObject("advancedWizardPage2.HeaderImage")));
-            this.advancedWizardPage2.HeaderImageVisible = true;
-            this.advancedWizardPage2.HeaderTitle = "אנא מלא פרטי עובד";
-            this.advancedWizardPage2.Location = new System.Drawing.Point(0, 0);
-            this.advancedWizardPage2.Name = "advancedWizardPage2";
-            this.advancedWizardPage2.PreviousPage = 0;
-            this.advancedWizardPage2.Size = new System.Drawing.Size(848, 568);
-            this.advancedWizardPage2.SubTitle = "";
-            this.advancedWizardPage2.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
-            this.advancedWizardPage2.TabIndex = 2;
+            this.label39.AutoSize = true;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label39.Location = new System.Drawing.Point(656, 99);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(132, 17);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "שם הטיפול";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // advancedWizardPage3
+            // label41
             // 
-            this.advancedWizardPage3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.advancedWizardPage3.Header = true;
-            this.advancedWizardPage3.HeaderBackgroundColor = System.Drawing.Color.White;
-            this.advancedWizardPage3.HeaderFont = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.advancedWizardPage3.HeaderImage = ((System.Drawing.Image)(resources.GetObject("advancedWizardPage3.HeaderImage")));
-            this.advancedWizardPage3.HeaderImageVisible = true;
-            this.advancedWizardPage3.HeaderTitle = "Welcome to Advanced Wizard";
-            this.advancedWizardPage3.Location = new System.Drawing.Point(0, 0);
-            this.advancedWizardPage3.Name = "advancedWizardPage3";
-            this.advancedWizardPage3.PreviousPage = 0;
-            this.advancedWizardPage3.Size = new System.Drawing.Size(848, 568);
-            this.advancedWizardPage3.SubTitle = "Your page description goes here";
-            this.advancedWizardPage3.SubTitleFont = new System.Drawing.Font("Tahoma", 8F);
-            this.advancedWizardPage3.TabIndex = 2;
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label41.Location = new System.Drawing.Point(656, 156);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(132, 302);
+            this.label41.TabIndex = 1;
+            this.label41.Text = "תיאור הטיפול";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel8
+            // label42
             // 
-            this.tableLayoutPanel8.ColumnCount = 3;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.65566F));
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.43868F));
-            this.tableLayoutPanel8.Controls.Add(this.Worker_Profile_Panel, 1, 1);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 70);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 3;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.04418F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.52209F));
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(848, 498);
-            this.tableLayoutPanel8.TabIndex = 1;
+            this.label42.AutoSize = true;
+            this.label42.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label42.Location = new System.Drawing.Point(656, 458);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(132, 17);
+            this.label42.TabIndex = 2;
+            this.label42.Text = "מחיר";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Worker_Profile_Panel
+            // Treatment_Decription
             // 
-            this.Worker_Profile_Panel.ColumnCount = 2;
-            this.Worker_Profile_Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.4375F));
-            this.Worker_Profile_Panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.5625F));
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_Id, 1, 2);
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_fname, 1, 3);
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_lname, 1, 4);
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_phone, 1, 7);
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_email, 1, 8);
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_gender, 1, 6);
-            this.Worker_Profile_Panel.Controls.Add(this.Worker_Bdate, 1, 5);
-            this.Worker_Profile_Panel.Controls.Add(this.label7, 0, 2);
-            this.Worker_Profile_Panel.Controls.Add(this.label8, 0, 3);
-            this.Worker_Profile_Panel.Controls.Add(this.label9, 0, 4);
-            this.Worker_Profile_Panel.Controls.Add(this.label10, 0, 5);
-            this.Worker_Profile_Panel.Controls.Add(this.label11, 0, 6);
-            this.Worker_Profile_Panel.Controls.Add(this.label12, 0, 7);
-            this.Worker_Profile_Panel.Controls.Add(this.label13, 0, 8);
-            this.Worker_Profile_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_Profile_Panel.Location = new System.Drawing.Point(101, 58);
-            this.Worker_Profile_Panel.Name = "Worker_Profile_Panel";
-            this.Worker_Profile_Panel.RowCount = 10;
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_Profile_Panel.Size = new System.Drawing.Size(660, 395);
-            this.Worker_Profile_Panel.TabIndex = 0;
+            this.Treatment_Decription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Decription.Location = new System.Drawing.Point(43, 159);
+            this.Treatment_Decription.Name = "Treatment_Decription";
+            this.Treatment_Decription.Size = new System.Drawing.Size(607, 296);
+            this.Treatment_Decription.TabIndex = 3;
+            this.Treatment_Decription.Text = "";
             // 
-            // Worker_Id
+            // Treatment_Name
             // 
-            this.Worker_Id.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_Id.Location = new System.Drawing.Point(3, 23);
-            this.Worker_Id.Name = "Worker_Id";
-            this.Worker_Id.Size = new System.Drawing.Size(335, 22);
-            this.Worker_Id.TabIndex = 0;
+            this.Treatment_Name.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Treatment_Name.Location = new System.Drawing.Point(43, 102);
+            this.Treatment_Name.Name = "Treatment_Name";
+            this.Treatment_Name.Size = new System.Drawing.Size(607, 22);
+            this.Treatment_Name.TabIndex = 4;
             // 
-            // Worker_fname
+            // Treatment_Price
             // 
-            this.Worker_fname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_fname.Location = new System.Drawing.Point(3, 51);
-            this.Worker_fname.Name = "Worker_fname";
-            this.Worker_fname.Size = new System.Drawing.Size(335, 22);
-            this.Worker_fname.TabIndex = 1;
-            // 
-            // Worker_lname
-            // 
-            this.Worker_lname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_lname.Location = new System.Drawing.Point(3, 79);
-            this.Worker_lname.Name = "Worker_lname";
-            this.Worker_lname.Size = new System.Drawing.Size(335, 22);
-            this.Worker_lname.TabIndex = 2;
-            // 
-            // Worker_phone
-            // 
-            this.Worker_phone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_phone.Location = new System.Drawing.Point(3, 165);
-            this.Worker_phone.Name = "Worker_phone";
-            this.Worker_phone.Size = new System.Drawing.Size(335, 22);
-            this.Worker_phone.TabIndex = 5;
-            // 
-            // Worker_email
-            // 
-            this.Worker_email.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_email.Location = new System.Drawing.Point(3, 193);
-            this.Worker_email.Name = "Worker_email";
-            this.Worker_email.Size = new System.Drawing.Size(335, 22);
-            this.Worker_email.TabIndex = 6;
-            // 
-            // Worker_gender
-            // 
-            this.Worker_gender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_gender.FormattingEnabled = true;
-            this.Worker_gender.Items.AddRange(new object[] {
-            "זכר",
-            "נקבה",
-            "מעדיף לא לומר"});
-            this.Worker_gender.Location = new System.Drawing.Point(3, 135);
-            this.Worker_gender.Name = "Worker_gender";
-            this.Worker_gender.Size = new System.Drawing.Size(335, 24);
-            this.Worker_gender.TabIndex = 4;
-            // 
-            // Worker_Bdate
-            // 
-            this.Worker_Bdate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_Bdate.Location = new System.Drawing.Point(3, 107);
-            this.Worker_Bdate.Name = "Worker_Bdate";
-            this.Worker_Bdate.Size = new System.Drawing.Size(335, 22);
-            this.Worker_Bdate.TabIndex = 3;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(344, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(313, 28);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "תעודת זהות";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(344, 48);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(313, 28);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "שם פרטי";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(344, 76);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(313, 28);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "שם משפחה";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(344, 104);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(313, 28);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "יום הולדת";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(344, 132);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(313, 30);
-            this.label11.TabIndex = 12;
-            this.label11.Text = "מין";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(344, 162);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(313, 28);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "פאלפון";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(344, 190);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(313, 28);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "אימייל";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // tableLayoutPanel14
-            // 
-            this.tableLayoutPanel14.ColumnCount = 3;
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.33334F));
-            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel14.Controls.Add(this.Worker_User_panel, 1, 1);
-            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 70);
-            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
-            this.tableLayoutPanel14.RowCount = 3;
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.29317F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.90361F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.80321F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(848, 498);
-            this.tableLayoutPanel14.TabIndex = 1;
-            // 
-            // Worker_User_panel
-            // 
-            this.Worker_User_panel.ColumnCount = 2;
-            this.Worker_User_panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Worker_User_panel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.Worker_User_panel.Controls.Add(this.label40, 0, 1);
-            this.Worker_User_panel.Controls.Add(this.Worker_password, 1, 1);
-            this.Worker_User_panel.Controls.Add(this.Worker_Admin, 0, 2);
-            this.Worker_User_panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_User_panel.Location = new System.Drawing.Point(75, 119);
-            this.Worker_User_panel.Name = "Worker_User_panel";
-            this.Worker_User_panel.RowCount = 3;
-            this.Worker_User_panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_User_panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_User_panel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.Worker_User_panel.Size = new System.Drawing.Size(700, 122);
-            this.Worker_User_panel.TabIndex = 0;
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Location = new System.Drawing.Point(353, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(344, 28);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "סיסמא";
-            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Worker_password
-            // 
-            this.Worker_password.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_password.Location = new System.Drawing.Point(3, 3);
-            this.Worker_password.Name = "Worker_password";
-            this.Worker_password.PasswordChar = '*';
-            this.Worker_password.Size = new System.Drawing.Size(344, 22);
-            this.Worker_password.TabIndex = 0;
-            // 
-            // Worker_Admin
-            // 
-            this.Worker_Admin.AutoSize = true;
-            this.Worker_Admin.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Worker_Admin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Worker_Admin.Location = new System.Drawing.Point(353, 31);
-            this.Worker_Admin.Name = "Worker_Admin";
-            this.Worker_Admin.Size = new System.Drawing.Size(344, 88);
-            this.Worker_Admin.TabIndex = 1;
-            this.Worker_Admin.Text = "מנהל";
-            this.Worker_Admin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Worker_Admin.UseVisualStyleBackColor = true;
+            this.Treatment_Price.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Treatment_Price.Location = new System.Drawing.Point(43, 461);
+            this.Treatment_Price.Name = "Treatment_Price";
+            this.Treatment_Price.Size = new System.Drawing.Size(607, 22);
+            this.Treatment_Price.TabIndex = 5;
             // 
             // MainWindow
             // 
@@ -2265,11 +2481,20 @@
             this.Register_car_deatiles.ResumeLayout(false);
             this.Register_car_deatiles.PerformLayout();
             this.tableLayoutPanel12.ResumeLayout(false);
+            this.Worker_Profile_Page.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.Worker_Profile_Panel.ResumeLayout(false);
+            this.Worker_Profile_Panel.PerformLayout();
+            this.advancedWizardPage2.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.Worker_User_panel.ResumeLayout(false);
+            this.Worker_User_panel.PerformLayout();
             this.Workers_Page.ResumeLayout(false);
             this.tabControl6.ResumeLayout(false);
             this.tabPage12.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tabPage15.ResumeLayout(false);
+            this.Worker_Register.ResumeLayout(false);
             this.tabPage16.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.tableLayoutPanel7.PerformLayout();
@@ -2287,8 +2512,12 @@
             this.tabPage6.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage9.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel18.PerformLayout();
             this.tabPage10.ResumeLayout(false);
-            this.advancedWizard3.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabControl5.ResumeLayout(false);
             this.tabPage13.ResumeLayout(false);
@@ -2297,15 +2526,9 @@
             this.tabPage18.ResumeLayout(false);
             this.tabPage18.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.Worker_Register.ResumeLayout(false);
-            this.Worker_Profile_Page.ResumeLayout(false);
-            this.advancedWizardPage2.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.Worker_Profile_Panel.ResumeLayout(false);
-            this.Worker_Profile_Panel.PerformLayout();
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.Worker_User_panel.ResumeLayout(false);
-            this.Worker_User_panel.PerformLayout();
+            this.advancedWizard1.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.tableLayoutPanel13.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2324,10 +2547,8 @@
         private AdvancedWizardControl.Wizard.AdvancedWizard advancedWizard2;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox Treatment_List;
         private System.Windows.Forms.TabPage tabPage10;
-        private AdvancedWizardControl.Wizard.AdvancedWizard advancedWizard3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage Workers_Page;
         private System.Windows.Forms.TabControl tabControl6;
@@ -2363,7 +2584,7 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ListBox Manufactor_List;
         private System.Windows.Forms.TabPage tabPage18;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label3;
@@ -2373,8 +2594,7 @@
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.ListBox listBox6;
-        private AdvancedWizardControl.WizardPages.AdvancedWizardPage Profile;
+        private System.Windows.Forms.ListBox Model_List;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
@@ -2463,5 +2683,25 @@
         private System.Windows.Forms.CheckBox Worker_Admin;
         private AdvancedWizardControl.WizardPages.AdvancedWizardPage advancedWizardPage3;
         private AdvancedWizardControl.Wizard.AdvancedWizard Worker_Register;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.Button Treatment_Update;
+        private System.Windows.Forms.Button Treatment_Delete;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.RichTextBox Treatment_Preview_Decription;
+        private System.Windows.Forms.TextBox Treatment_Preview_Name;
+        private System.Windows.Forms.TextBox Treatment_Preview_Price;
+        private AdvancedWizardControl.Wizard.AdvancedWizard advancedWizard1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.RichTextBox Treatment_Decription;
+        private System.Windows.Forms.TextBox Treatment_Name;
+        private System.Windows.Forms.TextBox Treatment_Price;
     }
 }

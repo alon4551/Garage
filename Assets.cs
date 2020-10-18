@@ -10,6 +10,21 @@ namespace Garage
     public static class Assets
     {
         public static List<Row> users,workers,cars,treatments,models,manufactors,shifts,order_treatments,orders ,cars_order;
+       public static int GetNewId(string name)
+        {
+            List<Row> table = Access.getObjects(SQL_Queries.Select(name));
+            
+            if (table != null)
+            {
+                try
+                {
+                    return int.Parse(table[table.Count - 1].GetColValue(0).ToString())+1;
+                }
+                catch (Exception err) { }
+            }
+            return -1;
+        }
+
         public static void Refresh()
         {
             Reload_Cars();

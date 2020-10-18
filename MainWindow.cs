@@ -1,4 +1,5 @@
 ﻿using Garage.sql_helper;
+using Garage.Treatment;
 using Garage.Worker;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,10 @@ namespace Garage
             foreach (string name in names)
                 box.Items.Add(name);
         }
+        private void Load_Treatments()
+        {
+            Load_List(Treatment_List, Treatment_utiles.getNames());
+        }
         private void Load_Workers()
         {
             Load_List(Worker_List, Worker_utiles.getWorkerNames());
@@ -71,6 +76,7 @@ namespace Garage
             Load_People();
             Load_Workers();
             Load_Register();
+            Load_Treatments();
         }
         //finish loading data to screen
 
@@ -116,8 +122,8 @@ namespace Garage
         {
             if (people_Main.remove_user())
             {
-                Assets.Refresh();
-                MainWindow_Load(null, null);
+
+                Refresh_Screen();
                 MessageBox.Show("משתמש נחמק");
             }
         }
@@ -150,9 +156,8 @@ namespace Garage
                     values.Add(Register_email.Text);
                     if (Register_utiles.InsertPerson(values) && Register_utiles.InsertCar())
                     {
-                        Assets.Refresh();
+                        Refresh_Screen();
                         Clear_Car_Register_Form();
-                        MainWindow_Load(null, null);
                         MessageBox.Show("Inserted");
                     }
                     else
@@ -332,8 +337,7 @@ namespace Garage
                 };
                     if( Access.Execute(SQL_Queries.Insert("people", profile))&& Access.Execute(SQL_Queries.Insert("workers", user)))
                     {
-                        Assets.Refresh();
-                        MainWindow_Load(null, null);
+                        Refresh_Screen();
                         MessageBox.Show("inserted");
                     }
                     else
@@ -351,6 +355,110 @@ namespace Garage
             else
                 MessageBox.Show("אנא מלא את השדות החסרים");
         }
+
+        private void Treatment_Wizzard_Finish(object sender, EventArgs e)
+        {
+            int id = Assets.GetNewId("treatments");
+            if (id == -1) {
+                MessageBox.Show(Access.ExplaindError());
+                return;
+            }
+            try
+            {
+                List<object> list = new List<object>()
+            {
+                id,
+                Treatment_Name.Text,
+                Treatment_Decription.Text,
+                int.Parse(Treatment_Price.Text)
+            };
+                if (Access.Execute(SQL_Queries.Insert("treatments", list)))
+                {
+                    MessageBox.Show("טיפול חדש נכנס לטיפול");
+                    Refresh_Screen();
+                }
+                else
+                    MessageBox.Show(Access.ExplaindError());
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void Treatment_Price_TextChanged(object sender, EventArgs e)
+        {
+            TextBox box = (TextBox)sender;
+            if (box.Text != "")
+                try { int.Parse(box.Text); }
+                catch
+                {
+                    MessageBox.Show("רק מספרים בשדה זה");
+                    box.Text = "";
+                }
+
+        }
+
+        private void Treatment_List_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Treatment_utiles.ChangeTreatment(Treatment_List.SelectedIndex);
+            Load_Treatment();
+        }
+        private void Load_Treatment()
+        {
+            Treatment_Preview_Name.Text = Treatment_utiles.GetValue("treatment");
+            Treatment_Preview_Decription.Text = Treatment_utiles.GetValue("summery");
+            Treatment_Preview_Price.Text = Treatment_utiles.GetValue("price");
+        }
+        private void Refresh_Screen()
+        {
+            using (Loading_Screen window = new Loading_Screen())
+            {
+                window.Show();
+                Assets.Refresh();
+                MainWindow_Load(null, null);
+                window.Close();
+            }
+
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Col> values = new List<Col>()
+            {
+                new Col("treatment",Treatment_Preview_Name.Text),
+                new Col("summery",Treatment_Preview_Decription.Text),
+                new Col("price",int.Parse(Treatment_Preview_Price.Text))
+            };
+                if (Treatment_utiles.UpdateTreatment(values))
+                {
+                    Refresh_Screen();
+                    MessageBox.Show("טיפול עודכן");
+                }
+                else
+                {
+                    MessageBox.Show(Access.ExplaindError());
+                }
+            }
+            catch { }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (Treatment_utiles.DeleteTreatment())
+            {
+                Treatment_List.SelectedIndex = -1;
+                Refresh_Screen();
+                MessageBox.Show("טיפול נמחק");
+            }
+            else
+            {
+                MessageBox.Show(Access.ExplaindError());
+            }
+        }
+
+
 
 
 
